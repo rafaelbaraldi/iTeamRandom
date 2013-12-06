@@ -21,7 +21,7 @@
     if (self) {
         UITabBarItem* item = [self tabBarItem];
         [item setTitle:@""];
-        [item setImage:[UIImage imageNamed:@"time"]];
+        [item setImage:[UIImage imageNamed:@"team"]];
     }
     return self;
 }

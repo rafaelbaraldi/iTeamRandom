@@ -23,7 +23,7 @@
         // Custom initialization
         UITabBarItem* item = [self tabBarItem];
         [item setTitle:@""];
-        [item setImage:[UIImage imageNamed:@"1"]];
+        [item setImage:[UIImage imageNamed:@"ball"]];
         
     }
     return self;

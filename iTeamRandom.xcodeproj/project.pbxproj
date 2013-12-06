@@ -21,11 +21,11 @@
 		1B4B6308184E66EF006626C9 /* iTeamRandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4B6307184E66EF006626C9 /* iTeamRandomTests.m */; };
 		1B4B6314184E676F006626C9 /* RandomTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4B6312184E676F006626C9 /* RandomTeamViewController.m */; };
 		1B4B6315184E676F006626C9 /* RandomTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B4B6313184E676F006626C9 /* RandomTeamViewController.xib */; };
-		1B4B6319184E6B0B006626C9 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4B6318184E6B0B006626C9 /* 1.png */; };
 		1B8565CB184FB49300FC9B2F /* PlayerStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8565CA184FB49300FC9B2F /* PlayerStore.m */; };
 		1B9352A51850FF6700FC62DA /* FinalTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9352A31850FF6700FC62DA /* FinalTeamViewController.m */; };
 		1B9352A61850FF6700FC62DA /* FinalTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9352A41850FF6700FC62DA /* FinalTeamViewController.xib */; };
-		1B9352A81851032E00FC62DA /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B9352A71851032E00FC62DA /* time.png */; };
+		31F620D3185236B000597326 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 31F620D1185236AF00597326 /* ball.png */; };
+		31F620D4185236B000597326 /* team.png in Resources */ = {isa = PBXBuildFile; fileRef = 31F620D2185236B000597326 /* team.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +58,13 @@
 		1B4B6311184E676F006626C9 /* RandomTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomTeamViewController.h; sourceTree = "<group>"; };
 		1B4B6312184E676F006626C9 /* RandomTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomTeamViewController.m; sourceTree = "<group>"; };
 		1B4B6313184E676F006626C9 /* RandomTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RandomTeamViewController.xib; sourceTree = "<group>"; };
-		1B4B6318184E6B0B006626C9 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		1B8565C9184FB49300FC9B2F /* PlayerStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStore.h; sourceTree = "<group>"; };
 		1B8565CA184FB49300FC9B2F /* PlayerStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStore.m; sourceTree = "<group>"; };
 		1B9352A21850FF6700FC62DA /* FinalTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalTeamViewController.h; sourceTree = "<group>"; };
 		1B9352A31850FF6700FC62DA /* FinalTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalTeamViewController.m; sourceTree = "<group>"; };
 		1B9352A41850FF6700FC62DA /* FinalTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalTeamViewController.xib; sourceTree = "<group>"; };
-		1B9352A71851032E00FC62DA /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
+		31F620D1185236AF00597326 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		31F620D2185236B000597326 /* team.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,6 @@
 		1B4B62D6184E66EE006626C9 = {
 			isa = PBXGroup;
 			children = (
-				1B4B6318184E6B0B006626C9 /* 1.png */,
 				1B4B62E8184E66EF006626C9 /* iTeamRandom */,
 				1B4B6301184E66EF006626C9 /* iTeamRandomTests */,
 				1B4B62E1184E66EF006626C9 /* Frameworks */,
@@ -125,7 +124,6 @@
 		1B4B62E8184E66EF006626C9 /* iTeamRandom */ = {
 			isa = PBXGroup;
 			children = (
-				1B9352A71851032E00FC62DA /* time.png */,
 				1B4B62F1184E66EF006626C9 /* AppDelegate.h */,
 				1B4B62F2184E66EF006626C9 /* AppDelegate.m */,
 				1B4B62F4184E66EF006626C9 /* Images.xcassets */,
@@ -134,6 +132,7 @@
 				1B4B6312184E676F006626C9 /* RandomTeamViewController.m */,
 				1B4B6313184E676F006626C9 /* RandomTeamViewController.xib */,
 				1B8565C9184FB49300FC9B2F /* PlayerStore.h */,
+				31F620D0185236A200597326 /* Images */,
 				1B8565CA184FB49300FC9B2F /* PlayerStore.m */,
 				1B9352A21850FF6700FC62DA /* FinalTeamViewController.h */,
 				1B9352A31850FF6700FC62DA /* FinalTeamViewController.m */,
@@ -169,6 +168,15 @@
 				1B4B6304184E66EF006626C9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31F620D0185236A200597326 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				31F620D1185236AF00597326 /* ball.png */,
+				31F620D2185236B000597326 /* team.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,9 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B9352A61850FF6700FC62DA /* FinalTeamViewController.xib in Resources */,
+				31F620D3185236B000597326 /* ball.png in Resources */,
+				31F620D4185236B000597326 /* team.png in Resources */,
 				1B4B6315184E676F006626C9 /* RandomTeamViewController.xib in Resources */,
-				1B9352A81851032E00FC62DA /* time.png in Resources */,
-				1B4B6319184E6B0B006626C9 /* 1.png in Resources */,
 				1B4B62ED184E66EF006626C9 /* InfoPlist.strings in Resources */,
 				1B4B62F5184E66EF006626C9 /* Images.xcassets in Resources */,
 			);
