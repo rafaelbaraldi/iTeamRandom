@@ -27,6 +27,7 @@
     if(self){
         allPlayers = [[NSMutableArray alloc]init];
         allTeams = [[NSMutableArray alloc]init];
+        allSubstitutes = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -43,11 +44,23 @@
     return allTeams;
 }
 
+-(NSArray*)allSubstitutesItems{
+    return allSubstitutes;
+}
+-(void)addSubstitutes:(NSString*)nome{
+    [allSubstitutes addObject:nome];
+}
+
 -(void)createTeams:(int)times Maximo:(int)maximo{
     
     NSMutableArray* players = [[NSMutableArray alloc]initWithArray:allPlayers copyItems:YES];
     
     [allTeams removeAllObjects];
+    
+    int countPlayres = [players count];
+    if(times == 0 && [allPlayers count] > 0){
+        times = floor(countPlayres / maximo);
+    }
     
     for(int i = 0; i < times; i++){
         [allTeams addObject:[[NSMutableArray alloc]init]];
@@ -59,6 +72,9 @@
                 [players removeObjectAtIndex:randi];
             }
         }
+    }
+    if([players count] > 0){
+        allSubstitutes = [NSMutableArray arrayWithArray:players];
     }
 }
 

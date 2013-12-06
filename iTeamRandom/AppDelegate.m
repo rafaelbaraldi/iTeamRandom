@@ -17,7 +17,17 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+//    UIViewController * randomTemViewController = [[RandomTeamViewController alloc] init];
+//    
+//    UINavigationController *navigationController = [[UINavigationController alloc] init];
+//    [navigationController pushViewController:randomTemViewController animated:NO];
+    
     UITabBarController* tabController = [[UITabBarController alloc]init];
+    
+//    [[UITabBar appearance]setTintColor:[UIColor redColor]];
+//    [[UITabBar appearance]setSelectedImageTintColor:[UIColor greenColor]];
+//    [[UITabBar appearance]setBarTintColor:[UIColor yellowColor]];
+    
     NSArray* a = [NSArray arrayWithObjects:[[RandomTeamViewController alloc]initWithNibName:@"RandomTeamViewController" bundle:nil], [[FinalTeamViewController alloc]initWithNibName:@"FinalTeamViewController" bundle:nil], nil];
     [tabController setViewControllers:a];
     [self.window setRootViewController:tabController];

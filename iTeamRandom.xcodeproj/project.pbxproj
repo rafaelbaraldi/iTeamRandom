@@ -124,6 +124,7 @@
 		1B4B62E8184E66EF006626C9 /* iTeamRandom */ = {
 			isa = PBXGroup;
 			children = (
+				31F620D0185236A200597326 /* Images */,
 				1B4B62F1184E66EF006626C9 /* AppDelegate.h */,
 				1B4B62F2184E66EF006626C9 /* AppDelegate.m */,
 				1B4B62F4184E66EF006626C9 /* Images.xcassets */,
@@ -132,7 +133,6 @@
 				1B4B6312184E676F006626C9 /* RandomTeamViewController.m */,
 				1B4B6313184E676F006626C9 /* RandomTeamViewController.xib */,
 				1B8565C9184FB49300FC9B2F /* PlayerStore.h */,
-				31F620D0185236A200597326 /* Images */,
 				1B8565CA184FB49300FC9B2F /* PlayerStore.m */,
 				1B9352A21850FF6700FC62DA /* FinalTeamViewController.h */,
 				1B9352A31850FF6700FC62DA /* FinalTeamViewController.m */,

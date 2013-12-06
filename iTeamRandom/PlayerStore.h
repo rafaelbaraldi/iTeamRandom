@@ -11,6 +11,7 @@
 @interface PlayerStore : NSObject{
     NSMutableArray* allPlayers;
     NSMutableArray* allTeams;
+    NSMutableArray* allSubstitutes;
 }
 
 +(PlayerStore*)sharedStore;
@@ -21,5 +22,8 @@
 -(NSArray*)allTeamsItems;
 
 -(void)createTeams:(int)times Maximo:(int)maximo;
+
+-(NSArray*)allSubstitutesItems;
+-(void)addSubstitutes:(NSString*)nome;
 
 @end

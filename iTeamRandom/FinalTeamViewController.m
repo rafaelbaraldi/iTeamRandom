@@ -20,7 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         UITabBarItem* item = [self tabBarItem];
-        [item setTitle:@""];
+        [item setTitle:@"Times"];
         [item setImage:[UIImage imageNamed:@"team"]];
     }
     return self;
@@ -45,11 +45,21 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [[[PlayerStore sharedStore]allTeamsItems]count];
+    if([[[PlayerStore sharedStore]allSubstitutesItems]count] > 0){
+        return [[[PlayerStore sharedStore]allTeamsItems]count] + 1;
+    }
+    else{
+        return [[[PlayerStore sharedStore]allTeamsItems]count];
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[[[PlayerStore sharedStore]allTeamsItems]objectAtIndex:section]count];
+    if([[[PlayerStore sharedStore]allSubstitutesItems]count] > 0 && section == [[[PlayerStore sharedStore]allTeamsItems]count]){
+        return [[[PlayerStore sharedStore]allSubstitutesItems]count];
+    }
+    else{
+        return [[[[PlayerStore sharedStore]allTeamsItems]objectAtIndex:section]count];
+    }
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -59,15 +69,25 @@
     }
     
     // Configure the cell...
-    
-    NSString* p = [[[[PlayerStore sharedStore]allTeamsItems]objectAtIndex:[indexPath section]]objectAtIndex:[indexPath row]];
+    NSString* p = @"";
+    if([[[PlayerStore sharedStore]allSubstitutesItems]count] > 0 && [indexPath section] == [[[PlayerStore sharedStore]allTeamsItems]count]){
+        p = [[[PlayerStore sharedStore]allSubstitutesItems]objectAtIndex:[indexPath row]];
+    }
+    else{
+        p = [[[[PlayerStore sharedStore]allTeamsItems]objectAtIndex:[indexPath section]]objectAtIndex:[indexPath row]];
+    }
     [[cell textLabel]setText:p];
     
     return cell;
 }
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return [NSString stringWithFormat:@"Time %d", section];
+    if([[[PlayerStore sharedStore]allSubstitutesItems]count] > 0 && section == [[[PlayerStore sharedStore]allTeamsItems]count]){
+        return @"Jogadores de proximo";
+    }
+    else{
+        return [NSString stringWithFormat:@"Time %d", section + 1];
+    }
 }
 
 @end

@@ -5,7 +5,7 @@
 //  Created by RAFAEL BARALDI on 03/12/13.
 //  Copyright (c) 2013 RAFAEL BARALDI. All rights reserved.
 //
-#define kOFFSET_FOR_KEYBOARD 180.0
+#define kOFFSET_FOR_KEYBOARD 200.0
 
 #import "RandomTeamViewController.h"
 #import "PlayerStore.h"
@@ -22,7 +22,7 @@
     if (self) {
         // Custom initialization
         UITabBarItem* item = [self tabBarItem];
-        [item setTitle:@""];
+        [item setTitle:@"Sorteio"];
         [item setImage:[UIImage imageNamed:@"ball"]];
         
     }
@@ -31,9 +31,9 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [super viewDidLoad];    
     
+    // Do any additional setup after loading the view from its nib.
     [[self tbJogadores] setDataSource:self];
     
     UIBarButtonItem* doneItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonDidPressed:)];
