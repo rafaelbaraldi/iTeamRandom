@@ -91,4 +91,10 @@
     [allPlayers insertObject:p atIndex:to];
 }
 
+-(void)replacePlayer:(NSString *)old for:(NSString *)new{
+    NSInteger position = [allPlayers indexOfObjectIdenticalTo:old];
+    [allPlayers removeObjectIdenticalTo:old];
+    [allPlayers insertObject:new atIndex:position];
+}
+
 @end

@@ -24,6 +24,7 @@
         UITabBarItem* item = [self tabBarItem];
         [item setTitle:@"Sorteio"];
         [item setImage:[UIImage imageNamed:@"ball"]];
+        [self setEditingPLayer:NO];
         
     }
     return self;
@@ -35,6 +36,7 @@
     
     // Do any additional setup after loading the view from its nib.
     [[self tbJogadores] setDataSource:self];
+    [[self tbJogadores] setDelegate:self];
     
     UIBarButtonItem* doneItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonDidPressed:)];
     UIToolbar* toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen]bounds].size.width, 44.f)];
@@ -67,14 +69,21 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     if(textField.tag == 0){
-        if(![self.txtJogadores.text isEqualToString:@""])
-            [[PlayerStore sharedStore]addPlayer:[[self txtJogadores]text]];
+        if(![self.txtJogadores.text isEqualToString:@""]){
+            if([self editingPLayer]){
+                [[PlayerStore sharedStore]replacePlayer:[self oldName] for:[textField text]];
+            }
+            else{
+                [[PlayerStore sharedStore]addPlayer:[[self txtJogadores]text]];
+            }
+        }
         
         self.txtJogadores.text = @"";
         
         [[self tbJogadores]reloadData];
     }
     
+   [self setEditingPLayer:NO];
     
     return YES;
 }
@@ -106,6 +115,7 @@
         [self keyboardWillHide];
     }
     
+    [self setEditingPLayer:NO];
     [self.view endEditing:YES];
 }
 
@@ -196,11 +206,21 @@
     [[PlayerStore sharedStore]movePlayerAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
 }
 
-//-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if(indexPath.row == 1)
-//        return YES;
-//    else
-//        return NO;
-//}
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    if([[self txtJogadores]isFirstResponder])
+        return NO;
+    else
+        return YES;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self setOldName:[[[PlayerStore sharedStore]allPlayersItems]objectAtIndex:[indexPath row]]];
+    [self setEditingPLayer:YES];
+    [[self txtJogadores]setText:[[[PlayerStore sharedStore] allPlayersItems]objectAtIndex:[indexPath row]]];
+    [[self txtJogadores]becomeFirstResponder];
+}
+
+
 
 @end

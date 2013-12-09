@@ -30,4 +30,6 @@
 
 -(void)movePlayerAtIndex:(int)from toIndex:(int)to;
 
+-(void)replacePlayer:(NSString*)old for:(NSString*)new;
+
 @end
