@@ -56,6 +56,7 @@
     NSMutableArray* players = [[NSMutableArray alloc]initWithArray:allPlayers copyItems:YES];
     
     [allTeams removeAllObjects];
+    [allSubstitutes removeAllObjects];
     
     int countPlayres = [players count];
     if(times == 0 && [allPlayers count] > 0 && maximo != 0){
