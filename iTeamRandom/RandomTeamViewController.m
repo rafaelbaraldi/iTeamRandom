@@ -170,4 +170,30 @@
 }
 
 
+- (IBAction)btnEditOnClick:(id)sender {
+    if([[self tbJogadores]isEditing]){
+        [sender setTitle:@"Editar" forState:UIControlStateNormal];
+        [[self tbJogadores]setEditing:NO animated:YES];
+    }
+    else{
+        [sender setTitle:@"Pronto" forState:UIControlStateNormal];
+        [[self tbJogadores]setEditing:YES animated:YES];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        PlayerStore* ps = [PlayerStore sharedStore];
+        NSArray* items = [ps allPlayersItems];
+        NSString* p = [items objectAtIndex:[indexPath row]];
+        [ps removePlayer:p];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    [[PlayerStore sharedStore]movePlayerAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
+}
+
 @end

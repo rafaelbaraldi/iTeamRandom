@@ -26,4 +26,8 @@
 -(NSArray*)allSubstitutesItems;
 -(void)addSubstitutes:(NSString*)nome;
 
+-(void)removePlayer:(NSString*)nome;
+
+-(void)movePlayerAtIndex:(int)from toIndex:(int)to;
+
 @end

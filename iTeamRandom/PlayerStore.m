@@ -58,7 +58,7 @@
     [allTeams removeAllObjects];
     
     int countPlayres = [players count];
-    if(times == 0 && [allPlayers count] > 0){
+    if(times == 0 && [allPlayers count] > 0 && maximo != 0){
         times = floor(countPlayres / maximo);
     }
     
@@ -76,6 +76,19 @@
     if([players count] > 0){
         allSubstitutes = [NSMutableArray arrayWithArray:players];
     }
+}
+
+-(void)removePlayer:(NSString *)nome{
+    [allPlayers removeObjectIdenticalTo:nome];
+}
+
+-(void)movePlayerAtIndex:(int)from toIndex:(int)to{
+    if(from == to)
+        return;
+    
+    NSString* p = [allPlayers objectAtIndex:from];
+    [allPlayers removeObjectAtIndex:from];
+    [allPlayers insertObject:p atIndex:to];
 }
 
 @end

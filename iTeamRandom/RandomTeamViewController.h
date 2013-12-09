@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tbJogadores;
 @property (weak, nonatomic) IBOutlet UITextField *txtTimes;
 @property (weak, nonatomic) IBOutlet UITextField *txtMaximoJogadores;
+- (IBAction)btnEditOnClick:(id)sender;
 
 @end
