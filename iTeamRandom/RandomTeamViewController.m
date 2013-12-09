@@ -196,4 +196,11 @@
     [[PlayerStore sharedStore]movePlayerAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
 }
 
+//-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if(indexPath.row == 1)
+//        return YES;
+//    else
+//        return NO;
+//}
+
 @end

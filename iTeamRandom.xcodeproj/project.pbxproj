@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B24E1B31856437F00713684 /* team-logo-26654538.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B24E1B21856437F00713684 /* team-logo-26654538.png */; };
 		1B4B62E3184E66EF006626C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4B62E2184E66EF006626C9 /* Foundation.framework */; };
 		1B4B62E5184E66EF006626C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4B62E4184E66EF006626C9 /* CoreGraphics.framework */; };
 		1B4B62E7184E66EF006626C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4B62E6184E66EF006626C9 /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B24E1B21856437F00713684 /* team-logo-26654538.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team-logo-26654538.png"; sourceTree = "<group>"; };
 		1B4B62DF184E66EF006626C9 /* iTeamRandom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTeamRandom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4B62E2184E66EF006626C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B4B62E4184E66EF006626C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,6 +175,7 @@
 		31F620D0185236A200597326 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1B24E1B21856437F00713684 /* team-logo-26654538.png */,
 				31F620D1185236AF00597326 /* ball.png */,
 				31F620D2185236B000597326 /* team.png */,
 			);
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B9352A61850FF6700FC62DA /* FinalTeamViewController.xib in Resources */,
+				1B24E1B31856437F00713684 /* team-logo-26654538.png in Resources */,
 				31F620D3185236B000597326 /* ball.png in Resources */,
 				31F620D4185236B000597326 /* team.png in Resources */,
 				1B4B6315184E676F006626C9 /* RandomTeamViewController.xib in Resources */,
