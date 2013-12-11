@@ -62,6 +62,9 @@
     if(times == 0 && [allPlayers count] > 0 && maximo != 0){
         times = floor(countPlayres / maximo);
     }
+    else if (maximo == 0 && [allPlayers count] > 0 && times != 0){
+        maximo = floor(countPlayres / times);
+    }
     
     for(int i = 0; i < times; i++){
         [allTeams addObject:[[NSMutableArray alloc]init]];

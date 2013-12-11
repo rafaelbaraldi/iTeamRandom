@@ -181,13 +181,15 @@
 
 
 - (IBAction)btnEditOnClick:(id)sender {
-    if([[self tbJogadores]isEditing]){
-        [sender setTitle:@"Editar" forState:UIControlStateNormal];
-        [[self tbJogadores]setEditing:NO animated:YES];
-    }
-    else{
-        [sender setTitle:@"Pronto" forState:UIControlStateNormal];
-        [[self tbJogadores]setEditing:YES animated:YES];
+    if(![[self txtJogadores]isFirstResponder]){
+        if([[self tbJogadores]isEditing]){
+            [sender setTitle:@"Editar" forState:UIControlStateNormal];
+            [[self tbJogadores]setEditing:NO animated:YES];
+        }
+        else{
+            [sender setTitle:@"Pronto" forState:UIControlStateNormal];
+            [[self tbJogadores]setEditing:YES animated:YES];
+        }
     }
 }
 
